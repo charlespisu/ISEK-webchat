@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="aimlModelStoreContainer" CdmEntityContainer="aimlEntities">
+    <EntitySetMapping Name="aimls">
+      <EntityTypeMapping TypeName="aimlModel.aiml">
+        <MappingFragment StoreEntitySet="aiml">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bot_id" ColumnName="bot_id" />
+          <ScalarProperty Name="aiml1" ColumnName="aiml" />
+          <ScalarProperty Name="pattern" ColumnName="pattern" />
+          <ScalarProperty Name="thatpattern" ColumnName="thatpattern" />
+          <ScalarProperty Name="template" ColumnName="template" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="filename" ColumnName="filename" />
+          <ScalarProperty Name="php_code" ColumnName="php_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aiml_userdefined">
+      <EntityTypeMapping TypeName="aimlModel.aiml_userdefined">
+        <MappingFragment StoreEntitySet="aiml_userdefined">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="aiml" ColumnName="aiml" />
+          <ScalarProperty Name="pattern" ColumnName="pattern" />
+          <ScalarProperty Name="template" ColumnName="template" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="botid" ColumnName="botid" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="botpersonalities">
+      <EntityTypeMapping TypeName="aimlModel.botpersonality">
+        <MappingFragment StoreEntitySet="botpersonality">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bot" ColumnName="bot" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="value" ColumnName="value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bots">
+      <EntityTypeMapping TypeName="aimlModel.bot">
+        <MappingFragment StoreEntitySet="bots">
+          <ScalarProperty Name="bot_id" ColumnName="bot_id" />
+          <ScalarProperty Name="bot_name" ColumnName="bot_name" />
+          <ScalarProperty Name="bot_desc" ColumnName="bot_desc" />
+          <ScalarProperty Name="bot_active" ColumnName="bot_active" />
+          <ScalarProperty Name="bot_parent_id" ColumnName="bot_parent_id" />
+          <ScalarProperty Name="format" ColumnName="format" />
+          <ScalarProperty Name="use_aiml_code" ColumnName="use_aiml_code" />
+          <ScalarProperty Name="update_aiml_code" ColumnName="update_aiml_code" />
+          <ScalarProperty Name="save_state" ColumnName="save_state" />
+          <ScalarProperty Name="conversation_lines" ColumnName="conversation_lines" />
+          <ScalarProperty Name="remember_up_to" ColumnName="remember_up_to" />
+          <ScalarProperty Name="debugemail" ColumnName="debugemail" />
+          <ScalarProperty Name="debugshow" ColumnName="debugshow" />
+          <ScalarProperty Name="debugmode" ColumnName="debugmode" />
+          <ScalarProperty Name="error_response" ColumnName="error_response" />
+          <ScalarProperty Name="default_aiml_pattern" ColumnName="default_aiml_pattern" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conversation_log">
+      <EntityTypeMapping TypeName="aimlModel.conversation_log">
+        <MappingFragment StoreEntitySet="conversation_log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="input" ColumnName="input" />
+          <ScalarProperty Name="response" ColumnName="response" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="bot_id" ColumnName="bot_id" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="myprogramoes">
+      <EntityTypeMapping TypeName="aimlModel.myprogramo">
+        <MappingFragment StoreEntitySet="myprogramo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uname" ColumnName="uname" />
+          <ScalarProperty Name="pword" ColumnName="pword" />
+          <ScalarProperty Name="lastip" ColumnName="lastip" />
+          <ScalarProperty Name="lastlogin" ColumnName="lastlogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pages">
+      <EntityTypeMapping TypeName="aimlModel.page">
+        <MappingFragment StoreEntitySet="page">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="keyword" ColumnName="keyword" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="hmtlContent" ColumnName="hmtlContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spellchecks">
+      <EntityTypeMapping TypeName="aimlModel.spellcheck">
+        <MappingFragment StoreEntitySet="spellcheck">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="missspelling" ColumnName="missspelling" />
+          <ScalarProperty Name="correction" ColumnName="correction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="undefined_defaults">
+      <EntityTypeMapping TypeName="aimlModel.undefined_defaults">
+        <MappingFragment StoreEntitySet="undefined_defaults">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bot" ColumnName="bot" />
+          <ScalarProperty Name="pattern" ColumnName="pattern" />
+          <ScalarProperty Name="replacement" ColumnName="replacement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="unknown_inputs">
+      <EntityTypeMapping TypeName="aimlModel.unknown_inputs">
+        <MappingFragment StoreEntitySet="unknown_inputs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="input" ColumnName="input" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="aimlModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="session_id" ColumnName="session_id" />
+          <ScalarProperty Name="bot_id" ColumnName="bot_id" />
+          <ScalarProperty Name="chatlines" ColumnName="chatlines" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="referer" ColumnName="referer" />
+          <ScalarProperty Name="browser" ColumnName="browser" />
+          <ScalarProperty Name="date_logged_on" ColumnName="date_logged_on" />
+          <ScalarProperty Name="last_update" ColumnName="last_update" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wordcensors">
+      <EntityTypeMapping TypeName="aimlModel.wordcensor">
+        <MappingFragment StoreEntitySet="wordcensor">
+          <ScalarProperty Name="censor_id" ColumnName="censor_id" />
+          <ScalarProperty Name="word_to_censor" ColumnName="word_to_censor" />
+          <ScalarProperty Name="replace_with" ColumnName="replace_with" />
+          <ScalarProperty Name="bot_exclude" ColumnName="bot_exclude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

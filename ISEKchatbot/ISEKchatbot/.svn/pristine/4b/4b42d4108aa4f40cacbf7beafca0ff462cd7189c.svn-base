@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin Controls</h2>
+
+
+
+        <p> Please be aware, the changes you make here can have unimaginable affects on this website, program, and the future.  </p>
+
+
+        <h4> If you are looking to change the layout of the website, or information on the website, this is your link: <a href="../Home/PageEditor"> Page Editor </a> </h4> 
+
+        <h4> If you are looking to change account information for this website ( User access, passwords) this is your link: <a href="../Account/ChangePassword"> Account Control</h4> 
+
+        <h4> Please follow here if you would like to set custom settings for ISEK: <a href="../Home/SpecialChat"> ISEK Configuration </a> </h4>
+        

@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "ProgramCoordinator";
+}
+
+<h2>Program Coordinator</h2>
+
+        <h4> Please follow here if you would like to set custom settings for ISEK: <a href="../Home/SpecialChat"> ISEK Configuration </a> </h4>

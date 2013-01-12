@@ -1,0 +1,21 @@
+<html>
+<title>speak.js: Text-to-Speech on the Web</title>
+<head>
+  <script>
+    // This demo is licensed under the GNU GPL.
+  </script>
+  <script src="speakClient.js"></script>
+</head>
+<body>
+  <form onsubmit="speak(text.value, { amplitude: amplitude.value, wordgap: workdgap.value, pitch: pitch.value, speed: speed.value }); return false">
+    <input type="text" name="text" size=50 value="Never gonna give, you, up.">
+    <input type= "hidden" name="amplitude" size=5 value="100">
+    <input type="hidden" name="pitch" size=5 value="50">
+    <input type="hidden" name="speed" size=5 value="175">
+    <input type="hidden" name="workdgap" size=5 value="0" >
+    <input type="submit" value="Go!">
+  </form>
+  <div id="audio"></div>
+</body>
+</html>
+

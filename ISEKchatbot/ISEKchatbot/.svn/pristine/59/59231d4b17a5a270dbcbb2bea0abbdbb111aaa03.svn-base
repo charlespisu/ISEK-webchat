@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Changelog &mdash; CKEditor for ASP.NET</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+html, body, h1, h2, h3, h4, h5, h6, div, span, blockquote, p, address, form, fieldset, img, ul, ol, dl, dt, dd, li, hr, table, td, th, strong, em, sup, sub, dfn, ins, del, q, cite, var, samp, code, kbd, tt, pre {
+	line-height: 1.5em;
+}
+
+body, input, textarea {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	font-size: 75%;
+	padding:10px 30px;
+}
+
+h1 {
+  color:#0782C1;
+  font-size:200%;
+  font-weight:normal;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color:#000000;
+  font-size:130%;
+  margin: 0;
+  padding: 0;
+}
+
+p, blockquote, address, form, pre, dl, h1, h2, h3, ul {
+	margin-bottom: 15px;
+}
+
+pre, code, kbd, samp, tt {
+    font-family: monospace,monospace;
+    font-size: 1em;
+}
+
+#footer hr {
+	margin: 10px 0 15px 0;
+	height: 1px;
+	border: solid 1px gray;
+	border-bottom: none;
+}
+
+#footer p {
+	margin: 0 10px 10px 10px;
+	float: left;
+}
+
+#footer #copy {
+	float: right;
+}
+
+	</style>
+</head>
+<body>
+	<h1>
+		CKEditor for ASP.NET Changelog
+	</h1>
+	<h2>
+		CKEditor for ASP.NET 3.6.4
+	</h2>
+	<p>
+			New features:</p>
+	<ul>
+		<li>Updated CKEditor to <a href="http://ckeditor.com/blog/CKEditor_3.6.4_released">3.6.4</a>.</li>
+	</ul>
+	<p>
+			Fixed issues:</p>
+	<ul>
+		<li><a href="http://dev.ckeditor.com/ticket/8608">#8608</a> : CKEditor configuration is not read by instances running in the update panel.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/8823">#8823</a> : CKEditor ASP.Net control does not handle <code>ReadOnly</code> attribute.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/8727">#8727</a> : Impossible to set focus in ASP.NET by calling <code>CKEditor.focus()</code>.</li>
+	</ul>
+	<h2>
+		CKEditor for ASP.NET 3.6.2
+	</h2>
+	<p>
+			New features:</p>
+	<ul>
+		<li>Updated CKEditor to <a href="http://ckeditor.com/blog/CKEditor_3.6.2_released">3.6.2</a>.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7850">#7850</a> : CKEditor now fires the <code>OnTextChanged</code> event.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7851">#7851</a> : <code>AutoPostBack</code> property is now available.</li>
+	</ul>
+	<p>
+			Fixed issues:</p>
+	<ul>
+		<li><a href="http://dev.ckeditor.com/ticket/8154">#8154</a> : Configuration is not preserved when set by code. Moved scripts registration from <code>OnLoad</code> to <code>OnPreRender</code>.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/8089">#8089</a> : Editor disappears on Ajax postback.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/8005">#8005</a> : Editor not displayed after a postback in a Dynamic Data site.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/8381">#8381</a> : <code>RequiredFieldValidator</code> returns wrong result on a first submit.</li>
+	</ul>
+	<h2>
+		CKEditor for ASP.NET 3.6.1
+	</h2>
+	<p>
+			Updated CKEditor to <a href="http://ckeditor.com/blog/CKEditor_3.6.1_released">3.6.1</a>.</p>
+	<h2>
+		CKEditor for ASP.NET 3.5.3
+	</h2>
+	<p>
+			Fixed issues:</p>
+	<ul>
+		<li><a href="http://dev.ckeditor.com/ticket/7283">#7283</a> : Text entered in the editor is not HTML-encoded.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7285">#7285</a> : Certain configuration options are not properly escaped.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7558">#7558</a> : Custom toolbar does not work.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7660">#7660</a> : Problem with toggling the visible status.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7659">#7659</a> : Plain textarea is shown when toggling CKEditor.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7302">#7302</a> : It is impossible to customize the editor inside a master page and if attributes are placed in front of the control ID.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7590">#7590</a> : Error in Visual Studio when trying to reset values in the Properties window.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7292">#7292</a> : Error: &quot;e is null&quot; when CKEditor is running inside the MultiView control.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7328">#7328</a> : Use <code>HttpUtility.HtmlDecode</code> to decode entities.</li>
+		<li><a href="http://dev.ckeditor.com/ticket/7695">#7695</a> : CKEditor was producing double slashes in URLs when BasePath contained a slash character at the end, which could lead to various issues.</li>
+	</ul>
+	<h2>
+		CKEditor for ASP.NET 3.5.2
+	</h2>
+	<p>
+		The first official release of the CKEditor ASP.NET Control. Changelog starts at this release.
+	</p>
+	<p>
+			Fixed issues:</p>
+	<ul>
+		<li><a href="http://dev.ckeditor.com/ticket/7276">#7276</a> : CKEditor for ASP.NET does not work in medium trust.</li>
+	</ul>
+	<div id="footer">
+		<hr />
+		<p>
+			CKEditor &mdash; The text editor for the Internet &mdash; <a href="http://ckeditor.com/">http://ckeditor.com</a>
+		</p>
+		<p id="copy">
+			Copyright &copy; 2003&ndash;2011, <a href="http://cksource.com/">CKSource</a> &mdash; Frederico
+			Knabben. All rights reserved.
+		</p>
+	</div>
+</body>
+</html>

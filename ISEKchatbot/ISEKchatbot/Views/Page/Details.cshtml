@@ -1,0 +1,25 @@
+﻿@model ISEKchatbot.Models.page
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>page</legend>
+
+    <div class="display-label">PageName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PageName)
+    </div>
+
+    <div class="display-label">HtmlContent</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HtmlContent)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,5 @@
+﻿@{
+    ViewBag.Title = "AccountControl";
+}
+
+<h2>AccountControl</h2>

@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Web;
+
+namespace ISEKchatbot.Models
+{
+    public class Database : DbContext
+    {
+
+        public DbSet<aiml> aimltest { get; set; }
+
+        public DbSet<aiml_userdefined> aiml_userdefined { get; set; }
+
+        public DbSet<bot> bot { get; set; }
+
+        public DbSet<botpersonality> botpersonality { get; set; }
+
+        public DbSet<conversation_log> conversation_log { get; set; }
+
+        public DbSet<page> page { get; set; }
+
+        public DbSet<user> user { get; set; }
+
+    }
+}

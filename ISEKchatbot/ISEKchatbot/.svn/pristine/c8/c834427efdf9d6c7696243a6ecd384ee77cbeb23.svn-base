@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+
+        <div id="content">
+        
+        <iframe src="http://127.0.0.1/Program0/gui/jquery/"; width="800px"; height="400px"; title="Chatbot"; seamless="seamless"; > </iframe>
+        
+        </div>
+        
+		<div id="sidebar">
+			
+            <p> Hello, I am ISEK the robot.  This is where I live.  Please join me for a conversation.  I can promise you I am far more interesting then any "Human". </p>
+
+		</div>

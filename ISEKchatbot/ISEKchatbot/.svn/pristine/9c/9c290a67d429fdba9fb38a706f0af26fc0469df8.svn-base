@@ -1,0 +1,50 @@
+﻿@model ISEKchatbot.Models.page
+<%@Page validateRequest = "false" %>
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<script type="text/javascript" src="../ckeditor.js"></script>
+	<script src="sample.js" type="text/javascript"></script>
+	<link href="sample.css" rel="stylesheet" type="text/css" />
+
+
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Page</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PageName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PageName)
+            @Html.ValidationMessageFor(model => model.PageName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HtmlContent)
+        </div>
+        <div class="editor-field">
+            
+            @Html.TextAreaFor(model => model.HtmlContent, new { @class = "ckeditor", @id = "text-details" })
+            @Html.ValidationMessageFor(model => model.HtmlContent)
+        </div>
+        <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10"></textarea>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

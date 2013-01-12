@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "_Samples", "_Samples\", "{B22E1937-BC86-4220-9CCB-66B400055690}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		ProjectReferences = "{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}|CKEditor.NET.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/_Samples"
+		Debug.AspNetCompiler.PhysicalPath = "_Samples\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\_Samples\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/_Samples"
+		Release.AspNetCompiler.PhysicalPath = "_Samples\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\_Samples\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60487"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKEditor.NET", "CKEditor.NET\CKEditor.NET.csproj", "{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B22E1937-BC86-4220-9CCB-66B400055690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22E1937-BC86-4220-9CCB-66B400055690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22E1937-BC86-4220-9CCB-66B400055690}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22E1937-BC86-4220-9CCB-66B400055690}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

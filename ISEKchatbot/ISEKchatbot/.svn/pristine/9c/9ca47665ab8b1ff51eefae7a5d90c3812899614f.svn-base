@@ -1,0 +1,5 @@
+﻿@{
+    ViewBag.Title = "SpecialChat";
+}
+
+<h2>SpecialChat</h2>

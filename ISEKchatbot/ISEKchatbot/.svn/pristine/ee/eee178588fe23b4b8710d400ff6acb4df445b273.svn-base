@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="isekModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="isekEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aimls" EntityType="isekModel.aiml" />
+    <EntitySet Name="aiml_userdefined" EntityType="isekModel.aiml_userdefined" />
+    <EntitySet Name="botpersonalities" EntityType="isekModel.botpersonality" />
+    <EntitySet Name="bots" EntityType="isekModel.bot" />
+    <EntitySet Name="conversation_log" EntityType="isekModel.conversation_log" />
+    <EntitySet Name="myprogramoes" EntityType="isekModel.myprogramo" />
+    <EntitySet Name="pages" EntityType="isekModel.page" />
+    <EntitySet Name="spellchecks" EntityType="isekModel.spellcheck" />
+    <EntitySet Name="undefined_defaults" EntityType="isekModel.undefined_defaults" />
+    <EntitySet Name="unknown_inputs" EntityType="isekModel.unknown_inputs" />
+    <EntitySet Name="users" EntityType="isekModel.user" />
+    <EntitySet Name="wordcensors" EntityType="isekModel.wordcensor" />
+  </EntityContainer>
+  <EntityType Name="aiml">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bot_id" Type="Int32" Nullable="false" />
+    <Property Name="aiml1" Type="String" Nullable="false" />
+    <Property Name="pattern" Type="String" Nullable="false" />
+    <Property Name="thatpattern" Type="String" Nullable="false" />
+    <Property Name="template" Type="String" Nullable="false" />
+    <Property Name="topic" Type="String" Nullable="false" />
+    <Property Name="filename" Type="String" Nullable="false" />
+    <Property Name="php_code" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aiml_userdefined">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aiml" Type="String" Nullable="false" />
+    <Property Name="pattern" Type="String" Nullable="false" />
+    <Property Name="template" Type="String" Nullable="false" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="botid" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="botpersonality">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bot" Type="SByte" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="value" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bot">
+    <Key>
+      <PropertyRef Name="bot_id" />
+    </Key>
+    <Property Name="bot_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bot_name" Type="String" Nullable="false" />
+    <Property Name="bot_desc" Type="String" Nullable="false" />
+    <Property Name="bot_active" Type="Int32" Nullable="false" />
+    <Property Name="bot_parent_id" Type="Int32" Nullable="false" />
+    <Property Name="format" Type="String" Nullable="false" />
+    <Property Name="use_aiml_code" Type="Int32" />
+    <Property Name="update_aiml_code" Type="Int32" Nullable="false" />
+    <Property Name="save_state" Type="String" Nullable="false" />
+    <Property Name="conversation_lines" Type="Int32" Nullable="false" />
+    <Property Name="remember_up_to" Type="Int32" Nullable="false" />
+    <Property Name="debugemail" Type="Int32" Nullable="false" />
+    <Property Name="debugshow" Type="Int32" Nullable="false" />
+    <Property Name="debugmode" Type="Int32" Nullable="false" />
+    <Property Name="error_response" Type="String" Nullable="false" />
+    <Property Name="default_aiml_pattern" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="conversation_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="input" Type="String" Nullable="false" />
+    <Property Name="response" Type="String" Nullable="false" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="bot_id" Type="Int32" Nullable="false" />
+    <Property Name="timestamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="myprogramo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uname" Type="String" Nullable="false" />
+    <Property Name="pword" Type="String" Nullable="false" />
+    <Property Name="lastip" Type="String" Nullable="false" />
+    <Property Name="lastlogin" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="page">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="PageName" Type="String" Nullable="false" />
+    <Property Name="HtmlContent" Type="String" />
+  </EntityType>
+  <EntityType Name="spellcheck">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="missspelling" Type="String" Nullable="false" />
+    <Property Name="correction" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="undefined_defaults">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bot" Type="Int32" Nullable="false" />
+    <Property Name="pattern" Type="String" Nullable="false" />
+    <Property Name="replacement" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="unknown_inputs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="input" Type="String" Nullable="false" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="timestamp" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="session_id" Type="String" Nullable="false" />
+    <Property Name="bot_id" Type="Int32" Nullable="false" />
+    <Property Name="chatlines" Type="Int32" Nullable="false" />
+    <Property Name="ip" Type="String" Nullable="false" />
+    <Property Name="referer" Type="String" Nullable="false" />
+    <Property Name="browser" Type="String" Nullable="false" />
+    <Property Name="date_logged_on" Type="DateTime" Nullable="false" />
+    <Property Name="last_update" Type="DateTime" Nullable="false" />
+    <Property Name="state" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="wordcensor">
+    <Key>
+      <PropertyRef Name="censor_id" />
+    </Key>
+    <Property Name="censor_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="word_to_censor" Type="String" Nullable="false" />
+    <Property Name="replace_with" Type="String" Nullable="false" />
+    <Property Name="bot_exclude" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,108 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using ISEKchatbot.Models;
+
+namespace ISEKchatbot.Controllers
+{ 
+    public class PageController : Controller
+    {
+        private ISEKchatbotContext db = new ISEKchatbotContext();
+
+        //
+        // GET: /Page/
+
+        public ViewResult Index()
+        {
+            return View(db.pages.ToList());
+        }
+
+        //
+        // GET: /Page/Details/5
+
+        public ViewResult Details(int id)
+        {
+            page page = db.pages.Find(id);
+            return View(page);
+        }
+
+        //
+        // GET: /Page/Create
+
+        public ActionResult Create()
+        {
+            return View();
+        } 
+
+        //
+        // POST: /Page/Create
+
+        [HttpPost, ValidateInput(false)]
+        public ActionResult Create(page page)
+        {
+            if (ModelState.IsValid)
+            {
+                db.pages.Add(page);
+                db.SaveChanges();
+                return RedirectToAction("Index");  
+            }
+
+            return View(page);
+        }
+        
+        //
+        // GET: /Page/Edit/5
+ 
+        public ActionResult Edit(int id)
+        {
+            page page = db.pages.Find(id);
+            return View(page);
+        }
+
+        //
+        // POST: /Page/Edit/5
+
+        [HttpPost, ValidateInput(false)]
+        public ActionResult Edit(page page)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(page).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(page);
+        }
+
+        //
+        // GET: /Page/Delete/5
+ 
+        public ActionResult Delete(int id)
+        {
+            page page = db.pages.Find(id);
+            return View(page);
+        }
+
+        //
+        // POST: /Page/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {            
+            page page = db.pages.Find(id);
+            db.pages.Remove(page);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
+    }
+}

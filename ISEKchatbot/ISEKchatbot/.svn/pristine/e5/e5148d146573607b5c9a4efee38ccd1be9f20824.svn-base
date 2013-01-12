@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace ISEKchatbot.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            ViewBag.Message = "Home Page of ISEK Chat Bot, Iowa State 309 Team A4";
+
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Admin()
+        {
+            return View();
+        }
+
+        public ActionResult ProgramCoordinator()
+        {
+            return View();
+        }
+
+        public ActionResult AccountControl()
+        {
+            return View();
+        }
+
+        public ActionResult PageEditor()
+        {
+            return View();
+        }
+
+        public ActionResult SpecialChat()
+        {
+            return View();
+        }
+
+    }
+}

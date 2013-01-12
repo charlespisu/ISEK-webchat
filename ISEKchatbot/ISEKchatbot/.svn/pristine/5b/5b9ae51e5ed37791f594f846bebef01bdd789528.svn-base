@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+
+        <div id="content">
+
+        <script language="javascript" type="text/javascript">
+            function ExecuteOnLoad() {
+                alert("Please note: ISEK is not a chat session with a human person. \n\n  ISEK is a predetermined conversation that has been filtered and is suitable for children to use \n \n\n Please ask your parents if they are alright with you chatting with ISEK the Iowa State Engineering Kids robot.");
+            }
+</script>
+
+
+        <iframe src="http://127.0.0.1/ISEK/gui/jquery/index.php"; width="800px"; height="400px"; title="Chatbot"; seamless="seamless"; > </iframe>
+        
+        </div>
+
+		<div id="sidebar">
+			
+            <h3> Hello! I am ISEK the robot. Please join me for a conversation! </h3>
+
+            <img src="../../Content/images/isek.jpg"; width= "500px"; />
+
+		</div>

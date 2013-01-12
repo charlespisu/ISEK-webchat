@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "SpecialChat";
+}
+
+<h2>ISEK Config</h2>
+
+  <iframe src="http://127.0.0.1/isek/admin/?page=select_bots"; width="1200px"; height="1200px"; title="Chatbot"; seamless="seamless"; > </iframe>

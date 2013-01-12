@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+
+        <div id="content">
+        
+        <h5> Robot chat will be here... ... .. </h5>
+        
+        </div>
+        
+		<div id="sidebar">
+			
+            <p> Hello, I am ISEK the robot.  This is where I live.  Please join me for a conversation.  I can promise you I am far more interesting then any "Human". </p>
+
+		</div>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="isekModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="isekModelStoreContainer">
+    <EntitySet Name="aiml" EntityType="isekModel.Store.aiml" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="aiml_userdefined" EntityType="isekModel.Store.aiml_userdefined" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="botpersonality" EntityType="isekModel.Store.botpersonality" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="bots" EntityType="isekModel.Store.bots" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="conversation_log" EntityType="isekModel.Store.conversation_log" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="myprogramo" EntityType="isekModel.Store.myprogramo" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="page" EntityType="isekModel.Store.page" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="spellcheck" EntityType="isekModel.Store.spellcheck" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="undefined_defaults" EntityType="isekModel.Store.undefined_defaults" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="unknown_inputs" EntityType="isekModel.Store.unknown_inputs" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="users" EntityType="isekModel.Store.users" store:Type="Tables" Schema="isek" />
+    <EntitySet Name="wordcensor" EntityType="isekModel.Store.wordcensor" store:Type="Tables" Schema="isek" />
+  </EntityContainer>
+  <EntityType Name="aiml">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bot_id" Type="int" Nullable="false" />
+    <Property Name="aiml" Type="text" Nullable="false" />
+    <Property Name="pattern" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="thatpattern" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="template" Type="text" Nullable="false" />
+    <Property Name="topic" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="filename" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="php_code" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aiml_userdefined">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="aiml" Type="text" Nullable="false" />
+    <Property Name="pattern" Type="text" Nullable="false" />
+    <Property Name="template" Type="text" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="botid" Type="int" Nullable="false" />
+    <Property Name="date" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="botpersonality">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bot" Type="tinyint" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="value" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bots">
+    <Key>
+      <PropertyRef Name="bot_id" />
+    </Key>
+    <Property Name="bot_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bot_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="bot_desc" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="bot_active" Type="int" Nullable="false" />
+    <Property Name="bot_parent_id" Type="int" Nullable="false" />
+    <Property Name="format" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="use_aiml_code" Type="int" />
+    <Property Name="update_aiml_code" Type="int" Nullable="false" />
+    <Property Name="save_state" Type="enum" Nullable="false" />
+    <Property Name="conversation_lines" Type="int" Nullable="false" />
+    <Property Name="remember_up_to" Type="int" Nullable="false" />
+    <Property Name="debugemail" Type="int" Nullable="false" />
+    <Property Name="debugshow" Type="int" Nullable="false" />
+    <Property Name="debugmode" Type="int" Nullable="false" />
+    <Property Name="error_response" Type="text" Nullable="false" />
+    <Property Name="default_aiml_pattern" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="conversation_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="input" Type="text" Nullable="false" />
+    <Property Name="response" Type="text" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="bot_id" Type="int" Nullable="false" />
+    <Property Name="timestamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="myprogramo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="uname" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="pword" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="lastip" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="lastlogin" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="page">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="PageName" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="HtmlContent" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="spellcheck">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="missspelling" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="correction" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="undefined_defaults">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bot" Type="int" Nullable="false" />
+    <Property Name="pattern" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="replacement" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="unknown_inputs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="input" Type="text" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="timestamp" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="text" Nullable="false" />
+    <Property Name="session_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="bot_id" Type="int" Nullable="false" />
+    <Property Name="chatlines" Type="int" Nullable="false" />
+    <Property Name="ip" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="referer" Type="text" Nullable="false" />
+    <Property Name="browser" Type="text" Nullable="false" />
+    <Property Name="date_logged_on" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="last_update" Type="timestamp" Nullable="false" Precision="0" />
+    <Property Name="state" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="wordcensor">
+    <Key>
+      <PropertyRef Name="censor_id" />
+    </Key>
+    <Property Name="censor_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="word_to_censor" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="replace_with" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="bot_exclude" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+</Schema>

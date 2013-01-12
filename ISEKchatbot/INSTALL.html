@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Installation Guide &mdash; CKEditor for ASP.NET</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+
+html, body, h1, h2, h3, h4, h5, h6, div, span, blockquote, p, address, form, fieldset, img, ul, ol, dl, dt, dd, li, hr, table, td, th, strong, em, sup, sub, dfn, ins, del, q, cite, var, samp, code, kbd, tt, pre {
+	line-height: 1.5em;
+}
+
+body, input, textarea {
+	color: #333333;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	font-size: 75%;
+	padding:10px 30px;
+}
+
+h1 {
+  color:#0782C1;
+  font-size:200%;
+  font-weight:normal;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color:#000000;
+  font-size:130%;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+	border-bottom: 1px solid #AAAAAA;
+}
+
+p, blockquote, address, form, pre, dl, h1, h2, h3, ul {
+	margin-bottom: 15px;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt{
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+pre	{
+	background-color: #F9F9F9;
+	border: 1px dashed #2F6FAB;
+	padding: 1em;
+	line-height: 1.1em;
+}
+
+#footer hr {
+	margin: 10px 0 15px 0;
+	height: 1px;
+	border: solid 1px gray;
+	border-bottom: none;
+}
+
+#footer p {
+	margin: 0 10px 10px 10px;
+	float: left;
+}
+
+#footer #copy {
+	float: right;
+}
+	</style>
+</head>
+<body>
+	<h1>
+		CKEditor for ASP.NET Installation Guide</h1>
+	<h3>
+		What Is CKEditor?</h3>
+	<p>
+		CKEditor is an online WYSIWYG rich text editor that can be embedded inside web pages.
+		It is not a replacement for desktop word processors like Microsoft Word or OpenOffice Writer,
+		but a component to be used as a part of web applications and websites. For more information 
+		on CKEditor refer to the <a href="http://ckeditor.com">product website</a>.
+	</p>
+	<h3>
+		Integrating CKEditor for ASP.NET with Your Page
+	</h3>
+	<p>
+		If you want to integrate CKEditor with your ASP.NET page, follow the steps outlined below.
+	</p>
+	<ol>
+		<li>
+			Go to the official <a href="http://ckeditor.com/download">CKEditor download site</a>
+		 	and download the latest versions of both <strong>CKEditor 3.x</strong> and the 
+		 	<strong>CKEditor for ASP.NET Control</strong>. 
+		</li>
+		<li>
+			Unpack both installation packages to a desired location.
+		</li>
+		<li>
+			Add a reference to the CKEditor for ASP.NET Control to your website.<br />
+			In Visual Studio use the <strong>Add Reference</strong> command and browse to
+			the <code>bin\Release\CKEditor.NET.dll</code> file from the unpacked CKEditor for ASP.NET
+			installation package. You can also manually copy the DLL file to the <code>bin</code>
+			folder of your application.
+		</li>
+		<li>
+			Copy the unpacked editor files from the CKEditor 3.x installation package and paste
+			them into the application directory of your website.
+		</li>
+		<li>
+			Register the CKEditor for ASP.NET Control in your page:
+<pre>&lt;%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %&gt;</pre>
+		</li>
+		<li>
+			Insert a CKEditor instance into the page body:
+<pre>&lt;CKEditor:CKEditorControl ID="CKEditor1" runat="server"&gt;&lt;/CKEditor:CKEditorControl&gt;</pre>
+		</li>
+		<li>
+			Run the ASP.NET application and open the page in the browser. A CKEditor instance should
+			be added to the page.
+		</li>
+	</ol>
+	<h3>
+		CKEditor for ASP.NET Samples
+	</h3>
+	<p>
+		The CKEditor for ASP.NET installation package comes with a few sample pages that can be used to try out
+		the ASP.NET control. In order to view the working samples in your browser, proceed as follows (all
+		instructions refer to Windows 7 and IIS):	 
+	</p>
+	<ol>
+		<li>
+			Unpack the <code>_samples</code> folder of the CKEditor for ASP.NET Control installation
+			package to <code>C:\inetpub\wwwroot</code>.<br />
+			If you do not have this folder in your system, you need to install Internet
+			Information Services first.
+		</li>
+		<li>
+			Go to <strong>Control Panel</strong> &ndash;&gt; <strong>System and Security</strong> &ndash;&gt; <strong>
+			Administrative Tools</strong> &ndash;&gt; <strong>Internet Information Services (IIS) Manager</strong>.
+			Find the <code>_samples</code> folder under the <strong>Default Web Site</strong> tree.			
+		</li>
+		<li>
+			Right-click the <code>_samples</code> folder and select <strong>Convert to application</strong>.
+		</li>
+		<li>
+			From the <strong>Browse Application</strong> menu on the right-hand side choose <strong>Browse
+			*:80 (http)</strong>.
+		</li>
+		<li>
+			The application will open in your default Internet browser. You can now browse the samples to see
+			the CKEditor for ASP.NET Control at work.
+		</li>
+	</ol>
+	<h3>
+		Documentation
+	</h3>
+	<p>
+		The full CKEditor for ASP.NET Control documentation is available online under the following address:<br />
+		<a href="http://docs.cksource.com/CKEditor.NET">http://docs.cksource.com/CKEditor.NET</a>
+	</p>
+	<div id="footer">
+		<hr />
+		<p>
+			CKEditor &mdash; The text editor for the Internet &mdash; <a href="http://ckeditor.com/">http://ckeditor.com</a>
+		</p>
+		<p id="copy">
+			Copyright &copy; 2003&ndash;2011, <a href="http://cksource.com/">CKSource</a> &mdash; Frederico
+			Knabben. All rights reserved.
+		</p>
+	</div>
+</body>
+</html>
